@@ -38,11 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-<<<<<<< HEAD
   m_IndirectSpecularColor: {r: 0.44237584, g: 0.49143213, b: 0.5712924, a: 1}
-=======
-  m_IndirectSpecularColor: {r: 0.4423762, g: 0.4914323, b: 0.57129276, a: 1}
->>>>>>> master
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -208,11 +204,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   settingsObject: {fileID: 1124800538}
   statsObject: {fileID: 1023564991}
-<<<<<<< HEAD
   youLose: {fileID: 8300000, guid: 92755830c5b120b41a1d4ac74b29f8b9, type: 3}
-=======
-  youLose: {fileID: 0}
->>>>>>> master
 --- !u!4 &1023564994
 Transform:
   m_ObjectHideFlags: 0
@@ -298,11 +290,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   settingsObject: {fileID: 1124800538}
   statsObject: {fileID: 1023564991}
-<<<<<<< HEAD
   youLose: {fileID: 8300000, guid: 92755830c5b120b41a1d4ac74b29f8b9, type: 3}
-=======
-  youLose: {fileID: 0}
->>>>>>> master
 --- !u!222 &1124800542
 CanvasRenderer:
   m_ObjectHideFlags: 0

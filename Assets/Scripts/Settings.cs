@@ -14,11 +14,8 @@ public class Settings : MonoBehaviour {
     static public int bonus = 0;
     static public int lives = 5;        // Number of times you can get hit before you lose
     private float scoreTimer = .25f;
-<<<<<<< HEAD
     private float GOtimer = 1;
     float timeElapsed = 0;
-=======
->>>>>>> master
 
     GUIText textbox;
     GUIText statbox;
@@ -38,7 +35,6 @@ public class Settings : MonoBehaviour {
             score += 10 + bonus;
             scoreTimer = .25f;
         }
-<<<<<<< HEAD
         if (GOtimer == 1)
         {
             timeElapsed = Mathf.Round(Time.time);
@@ -64,9 +60,4 @@ public class Settings : MonoBehaviour {
         textbox.text = "GAME OVER\n\nSCORE: " + score + " pts\nTIME: " + timeElapsed + " s";
         statbox.text = " ";
     }
-=======
-        textbox.text = "Score: " + score + "\nLives: " + lives;
-        statbox.text = "Speed: " + PlayerMovement.speed / 2 + "\nJump: " + PlayerMovement.jumpVel * 5 + "\nTime: " + Mathf.Round(Time.time) + "s";
-	}
->>>>>>> master
 }

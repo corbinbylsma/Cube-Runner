@@ -221,10 +221,7 @@ public class SceneControl : MonoBehaviour {
 
             ColliderAABB oneAABB = oneobj.GetComponent<ColliderAABB>();
             onesAABB.Add(oneAABB);
-<<<<<<< HEAD
             
-=======
->>>>>>> master
         }
     }
     void spawnPowerTwo()
@@ -254,10 +251,7 @@ public class SceneControl : MonoBehaviour {
 
             ColliderAABB twoAABB = twoobj.GetComponent<ColliderAABB>();
             twosAABB.Add(twoAABB);
-<<<<<<< HEAD
             
-=======
->>>>>>> master
         }
     }
     void spawnPowerThree()
@@ -287,10 +281,7 @@ public class SceneControl : MonoBehaviour {
 
             ColliderAABB threeAABB = threeobj.GetComponent<ColliderAABB>();
             threesAABB.Add(threeAABB);
-<<<<<<< HEAD
             
-=======
->>>>>>> master
         }
     }
 }
