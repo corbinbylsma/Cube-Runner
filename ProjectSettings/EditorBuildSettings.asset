@@ -8,6 +8,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/GameScenes/InfiniteRunner.unity
     guid: c224cc35be9c7544a9f791d4972c0f8e
+<<<<<<< HEAD
   - enabled: 1
     path: Assets/GameScenes/GameOver.unity
     guid: 1a16c2633f667b1478e8311b81e0bf39
+=======
+>>>>>>> master

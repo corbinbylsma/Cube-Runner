@@ -98,10 +98,24 @@ public class ManageCollision : MonoBehaviour
             if (resultPOne)
             {
                 // Player gains a higher jump
+<<<<<<< HEAD
                 PlayerMovement.iFrameTimer = .3f;
                 PlayerMovement.jumpVel += .05f;
                 AudioSource.PlayClipAtPoint(jumpUp, soundPlayer.transform.position);
                 DestroyOne();
+=======
+                if (PlayerMovement.iFrameTimer <= 0 && PlayerMovement.speed > 0)
+                {
+                    PlayerMovement.iFrameTimer = .3f;
+                    PlayerMovement.jumpVel += .05f;
+                    AudioSource.PlayClipAtPoint(jumpUp, soundPlayer.transform.position);
+
+                    Destroy(SceneControl.ones[0]);
+                    SceneControl.ones.RemoveAt(0);
+                    Destroy(SceneControl.onesAABB[0]);
+                    SceneControl.onesAABB.RemoveAt(0);
+                }
+>>>>>>> master
             }
         }
     }
@@ -114,11 +128,26 @@ public class ManageCollision : MonoBehaviour
             if (resultPTwo)
             {
                 // Player gains a higher speed and score multiplier
+<<<<<<< HEAD
                 PlayerMovement.iFrameTimer = .3f;
                 PlayerMovement.speed += 3;
                 Settings.bonus += 5;
                 AudioSource.PlayClipAtPoint(speedUp, soundPlayer.transform.position);
                 DestroyTwo();
+=======
+                if (PlayerMovement.iFrameTimer <= 0 && PlayerMovement.speed > 0)
+                {
+                    PlayerMovement.iFrameTimer = .3f;
+                    PlayerMovement.speed += 3;
+                    Settings.bonus += 5;
+                    AudioSource.PlayClipAtPoint(speedUp, soundPlayer.transform.position);
+
+                    Destroy(SceneControl.twos[0]);
+                    SceneControl.twos.RemoveAt(0);
+                    Destroy(SceneControl.twosAABB[0]);
+                    SceneControl.twosAABB.RemoveAt(0);
+                }
+>>>>>>> master
             }
         }
     }
@@ -131,6 +160,7 @@ public class ManageCollision : MonoBehaviour
             if (resultPThree)
             {
                 // Player gains an extra life
+<<<<<<< HEAD
                 PlayerMovement.iFrameTimer = .3f;
                 Settings.lives++;
                 AudioSource.PlayClipAtPoint(lifeUp, soundPlayer.transform.position);
@@ -159,4 +189,20 @@ public class ManageCollision : MonoBehaviour
         Destroy(SceneControl.threesAABB[0]);
         SceneControl.threesAABB.RemoveAt(0);
     }
+=======
+                if (PlayerMovement.iFrameTimer <= 0 && PlayerMovement.speed > 0)
+                {
+                    PlayerMovement.iFrameTimer = .3f;
+                    Settings.lives++;
+                    AudioSource.PlayClipAtPoint(lifeUp, soundPlayer.transform.position);
+
+                    Destroy(SceneControl.threes[0]);
+                    SceneControl.threes.RemoveAt(0);
+                    Destroy(SceneControl.threesAABB[0]);
+                    SceneControl.threesAABB.RemoveAt(0);
+                }
+            }
+        }
+    }
+>>>>>>> master
 }
