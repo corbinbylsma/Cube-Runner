@@ -43,7 +43,7 @@ public class ManageCollision : MonoBehaviour
                 {
                     Settings.lives--;
                     PlayerMovement.iFrameTimer = .5f / (PlayerMovement.speed / 20);
-                    PlayerMovement.speed = Mathf.Round(PlayerMovement.speed * .95f);
+                    if (PlayerMovement.speed <= 20) PlayerMovement.speed--;
                     AudioSource.PlayClipAtPoint(lifeDown1, soundPlayer.transform.position);
                 }
             }
@@ -63,7 +63,7 @@ public class ManageCollision : MonoBehaviour
                 {
                     Settings.lives--;
                     PlayerMovement.iFrameTimer = .5f;
-                    PlayerMovement.speed = Mathf.Round(PlayerMovement.speed * .95f);
+                    if (PlayerMovement.speed <= 20) PlayerMovement.speed--;
                     AudioSource.PlayClipAtPoint(lifeDown2, soundPlayer.transform.position);
                 }
             }
@@ -83,7 +83,7 @@ public class ManageCollision : MonoBehaviour
                 {
                     Settings.lives--;
                     PlayerMovement.iFrameTimer = .5f;
-                    PlayerMovement.speed = Mathf.Round(PlayerMovement.speed * .95f);
+                    if (PlayerMovement.speed <= 20) PlayerMovement.speed--;
                     AudioSource.PlayClipAtPoint(lifeDown3, soundPlayer.transform.position);
                 }
             }
