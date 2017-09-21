@@ -204,6 +204,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   settingsObject: {fileID: 1124800538}
   statsObject: {fileID: 1023564991}
+  youLose: {fileID: 0}
 --- !u!4 &1023564994
 Transform:
   m_ObjectHideFlags: 0
@@ -289,6 +290,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   settingsObject: {fileID: 1124800538}
   statsObject: {fileID: 1023564991}
+  youLose: {fileID: 0}
 --- !u!222 &1124800542
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -496,6 +498,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ff3b3b979479bc4da8b2519461af3f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundPlayer: {fileID: 303526249}
+  jumpUp: {fileID: 8300000, guid: 921622be5b8001640be211a1d6b44ccc, type: 3}
+  speedUp: {fileID: 8300000, guid: 1fd054059965ca043bae052fa49c9360, type: 3}
+  lifeUp: {fileID: 8300000, guid: 2c03bf615d8c6d443bad9f47867d98b0, type: 3}
+  lifeDown1: {fileID: 8300000, guid: 83e31c833812c7540ac8a4322277d892, type: 3}
+  lifeDown2: {fileID: 8300000, guid: a4b48efe33f2436418704105dac1506d, type: 3}
+  lifeDown3: {fileID: 8300000, guid: 4462d0d51c935544abf3bcfd1c89e218, type: 3}
 --- !u!1 &2099451839
 GameObject:
   m_ObjectHideFlags: 0

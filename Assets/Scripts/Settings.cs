@@ -8,9 +8,11 @@ public class Settings : MonoBehaviour {
     public GameObject settingsObject;
     public GameObject statsObject;
 
+    public AudioClip youLose;
+
     static public float score = 0;        // Score gained every 1/4 second
     static public int bonus = 0;
-    static public int lives = 10;        // Number of times you can get hit before you lose
+    static public int lives = 5;        // Number of times you can get hit before you lose
     private float scoreTimer = .25f;
 
     GUIText textbox;
@@ -20,6 +22,8 @@ public class Settings : MonoBehaviour {
     {
         textbox = settingsObject.GetComponent<GUIText>();
         statbox = statsObject.GetComponent<GUIText>();
+        DontDestroyOnLoad(settingsObject);
+        DontDestroyOnLoad(statsObject);
     }
 
     void Update () {

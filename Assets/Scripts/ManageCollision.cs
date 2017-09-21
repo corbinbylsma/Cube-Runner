@@ -4,8 +4,16 @@ using UnityEngine;
 
 public class ManageCollision : MonoBehaviour
 {
-
     ColliderAABB player;
+
+    public GameObject soundPlayer;
+
+    public AudioClip jumpUp;
+    public AudioClip speedUp;
+    public AudioClip lifeUp;
+    public AudioClip lifeDown1;
+    public AudioClip lifeDown2;
+    public AudioClip lifeDown3;
 
     void Start()
     {
@@ -35,6 +43,8 @@ public class ManageCollision : MonoBehaviour
                 {
                     Settings.lives--;
                     PlayerMovement.iFrameTimer = .5f / (PlayerMovement.speed / 20);
+                    PlayerMovement.speed = Mathf.Round(PlayerMovement.speed * .95f);
+                    AudioSource.PlayClipAtPoint(lifeDown1, soundPlayer.transform.position);
                 }
             }
         }
@@ -53,6 +63,8 @@ public class ManageCollision : MonoBehaviour
                 {
                     Settings.lives--;
                     PlayerMovement.iFrameTimer = .5f;
+                    PlayerMovement.speed = Mathf.Round(PlayerMovement.speed * .95f);
+                    AudioSource.PlayClipAtPoint(lifeDown2, soundPlayer.transform.position);
                 }
             }
         }
@@ -71,6 +83,8 @@ public class ManageCollision : MonoBehaviour
                 {
                     Settings.lives--;
                     PlayerMovement.iFrameTimer = .5f;
+                    PlayerMovement.speed = Mathf.Round(PlayerMovement.speed * .95f);
+                    AudioSource.PlayClipAtPoint(lifeDown3, soundPlayer.transform.position);
                 }
             }
         }
@@ -88,6 +102,7 @@ public class ManageCollision : MonoBehaviour
                 {
                     PlayerMovement.iFrameTimer = .3f;
                     PlayerMovement.jumpVel += .05f;
+                    AudioSource.PlayClipAtPoint(jumpUp, soundPlayer.transform.position);
 
                     Destroy(SceneControl.ones[0]);
                     SceneControl.ones.RemoveAt(0);
@@ -111,6 +126,7 @@ public class ManageCollision : MonoBehaviour
                     PlayerMovement.iFrameTimer = .3f;
                     PlayerMovement.speed += 3;
                     Settings.bonus += 5;
+                    AudioSource.PlayClipAtPoint(speedUp, soundPlayer.transform.position);
 
                     Destroy(SceneControl.twos[0]);
                     SceneControl.twos.RemoveAt(0);
@@ -133,6 +149,7 @@ public class ManageCollision : MonoBehaviour
                 {
                     PlayerMovement.iFrameTimer = .3f;
                     Settings.lives++;
+                    AudioSource.PlayClipAtPoint(lifeUp, soundPlayer.transform.position);
 
                     Destroy(SceneControl.threes[0]);
                     SceneControl.threes.RemoveAt(0);
